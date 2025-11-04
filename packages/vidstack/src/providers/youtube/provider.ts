@@ -79,6 +79,15 @@ export class YouTubeProvider
    */
   cookies = false;
 
+  /**
+   * From youtube iframe player api:
+   * This needs to be set if enablejsapi is set to 1.
+   * Using a strict same-origin Referrer Policy the player will throw an Error 153.
+   *
+   * @defaultValue `undefined`
+   */
+  origin = undefined;
+
   get currentSrc(): Src<string> | null {
     return this.#currentSrc;
   }
@@ -192,6 +201,7 @@ export class YouTubeProvider
       disablekb: !showControls || keyDisabled() ? 1 : 0,
       enablejsapi: 1,
       fs: 1,
+      origin: this.origin,
       hl: this.language,
       iv_load_policy: showControls ? 1 : 3,
       mute: muted() ? 1 : 0,
