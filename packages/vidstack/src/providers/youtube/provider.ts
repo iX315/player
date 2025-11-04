@@ -80,13 +80,25 @@ export class YouTubeProvider
   cookies = false;
 
   /**
-   * From youtube iframe player api:
-   * This needs to be set if enablejsapi is set to 1.
-   * Using a strict same-origin Referrer Policy the player will throw an Error 153.
+   * This parameter identifies the URL where the player is embedded. This value is used in YouTube
+   * Analytics reporting when the YouTube player is embedded in a widget, and that widget is then
+   * embedded in a web page or application. In that scenario, the origin parameter identifies the
+   * widget provider's domain, but YouTube Analytics should not identify the widget provider as the
+   * actual traffic source. Instead, YouTube Analytics uses the widget_referrer parameter value to
+   * identify the domain associated with the traffic source.
    *
    * @defaultValue `undefined`
    */
-  origin = undefined;
+  widget_referrer: string | undefined = undefined;
+
+  /**
+   * This parameter provides an extra security measure for the IFrame API and is only supported for
+   * IFrame embeds. If you are using the IFrame API, which means you are setting the enablejsapi
+   * parameter value to 1, you should always specify your domain as the origin parameter value.
+   *
+   * @defaultValue `undefined`
+   */
+  origin: string | undefined = undefined;
 
   get currentSrc(): Src<string> | null {
     return this.#currentSrc;
@@ -201,6 +213,7 @@ export class YouTubeProvider
       disablekb: !showControls || keyDisabled() ? 1 : 0,
       enablejsapi: 1,
       fs: 1,
+      widget_referrer: this.widget_referrer,
       origin: this.origin,
       hl: this.language,
       iv_load_policy: showControls ? 1 : 3,
