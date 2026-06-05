@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.15.4-next](https://github.com/vidstack/player/releases/tag/v1.15.4-next) (2026-06-05)
+
+### 🐛 Bug Fixes
+
+#### Vidstack
+
+- provider load connect race (#1840) ([b3f6dff](https://github.com/vidstack/player/commit/b3f6dffbc5db70e8903cd1604691094d64ee451f))
+
 ## [1.15.3-next](https://github.com/vidstack/player/releases/tag/v1.15.3-next) (2026-06-01)
 
 ### 🐛 Bug Fixes
