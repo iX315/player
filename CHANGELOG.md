@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.15.5-next](https://github.com/vidstack/player/releases/tag/v1.15.5-next) (2026-06-09)
+
+### 🐛 Bug Fixes
+
+#### Vidstack
+
+- declare fscreen runtime dependency (#1842) ([d2ece08](https://github.com/vidstack/player/commit/d2ece08234b45929db2e83fff396483810dc2259))
+
 ## [1.15.4-next](https://github.com/vidstack/player/releases/tag/v1.15.4-next) (2026-06-05)
 
 ### 🐛 Bug Fixes
