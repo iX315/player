@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.15.6-next](https://github.com/vidstack/player/releases/tag/v1.15.6-next) (2026-06-10)
+
+### 🐛 Bug Fixes
+
+#### Vidstack
+
+- cdn bundle should include fscreen ([25f226b](https://github.com/vidstack/player/commit/25f226b26b984d76d60c2737ec0792378cd5e547))
+
 ## [1.15.5-next](https://github.com/vidstack/player/releases/tag/v1.15.5-next) (2026-06-09)
 
 ### 🐛 Bug Fixes
